@@ -8,32 +8,37 @@ ASSIGNMENT RULES
 - The solution must be pushed to the repository and be available for the tutors by the end of the day (5PM CET)
 - Complete as many exercises as you can
 */
-
+const writeHeader = function(title) {
+  console.log(`\n\n>------------==[ ${title.toUpperCase()} ]==------------<`)
+}
 // JS Basics
+writeHeader('JS Basics')
 
 /* EXERCISE A
    Create a variable called test and assign a string value to it.
 */
-
+writeHeader('Variable Test')
 let test = 'This is a test';
-
+console.log(test)
 /* EXERCISE B
     Create a variable called sum and assign to it the result of the sum between the numbers 10 and 20.
 */
 
+writeHeader('Sum of 10 + 20')
 let sum = 10 + 20
 console.log(sum)
 
 /* EXERCISE C
     Create a variable called random and assign to it a random number between 0 and 20 (it should be randomly created at each execution).
 */
-
+writeHeader('create a random number')
 let random = Math.floor(Math.random() * 20 )
 console.log(random)
 /* EXERCISE D
     Create a variable called me and assign to it an object containing the following information: name = your name, surname = your surname, age = your age.
 */
 
+writeHeader('create an object')
 let me = {
     name: 'Sebastian',
     surname: 'Marquez',
@@ -44,14 +49,14 @@ console.log(me)
 /* EXERCISE E
     Write a piece of code for programmatically removing the age property from the previously create object.
 */
-
+writeHeader('Delete Age from Object')
 delete me.age;
 console.log(me)
 
 /* EXERCISE F
    Write a piece of code for programmatically adding to the me object you defined before an array called skills, containing the programming languages you know right now.
 */
-
+writeHeader('Add an array as a property')
  me.skills = ['Javascript', 'CSS', 'HTML'];
 
 
@@ -59,8 +64,14 @@ console.log(me)
 /* EXERCISE G
    Write a piece of code for programmatically removing the last skill from the skills array inside the me object.
 */
+writeHeader('remove the last element of the skills array')
+
+ me.skills.pop()
+console.log(me)
 
 // JS Functions
+
+writeHeader('JS functions')
 /* EXERCISE 1
     Write a function called dice; it should randomize an integer number between 1 and 6.
 */
