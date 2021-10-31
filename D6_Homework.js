@@ -76,6 +76,13 @@ writeHeader('JS functions')
     Write a function called dice; it should randomize an integer number between 1 and 6.
 */
 
+const dice = function () {
+
+  return Math.floor(Math.random() * 6) +1
+
+}
+
+console.log(dice());
 /* EXERCISE 2
     Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one.
 */
