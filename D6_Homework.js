@@ -242,12 +242,23 @@ const howManyDays = function(){
 console.log(howManyDays())
 
 
-// a and b are javascript Date objects
 
 /* EXERCISE 10
    Write a function called isTodayMyBirthday which should return true if today's your birthday, false otherwise.
 */
 
+writeHeader('is today is my birthday?')
+
+const isTodayMyBirthday = function(date){
+  
+  
+  let isTodayMyBirthday = new Date('September 5, 1986')
+  
+  return date.getDate() === isTodayMyBirthday.getDate() && date.getMonth() === isTodayMyBirthday.getMonth 
+         && date.getFullYear() === isTodayMyBirthday.getFullYear()
+}
+
+console.log(isTodayMyBirthday(new Date('September 5, 1999')))
 // JS Arrays & Objects
 // NOTE: the movies array used in some exercises is defined at the end of this file
 
