@@ -220,10 +220,29 @@ writeHeader('roll the dices')
                  return  obj;
        }
 
-       console.log(rollTheDices(10))
+       console.log(rollTheDices(6))
 /* EXERCISE 9
    Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
 */
+writeHeader('How many days')
+
+  let firstDate = new Date(2020, 1, 11);
+  let secondDate = new Date(2021, 1, 11);
+
+const howManyDays = function(){
+
+  let firstDate = new Date(2020, 1, 11);
+  let secondDate = new Date(2021, 1, 11);
+  const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+  const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
+  return  `Between ${firstDate} and ${secondDate} ${diffDays} days has passed`
+
+}
+
+console.log(howManyDays())
+
+
+// a and b are javascript Date objects
 
 /* EXERCISE 10
    Write a function called isTodayMyBirthday which should return true if today's your birthday, false otherwise.
