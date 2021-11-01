@@ -259,6 +259,9 @@ const isTodayMyBirthday = function(date){
 }
 
 console.log(isTodayMyBirthday(new Date('September 5, 1999')))
+console.log(isTodayMyBirthday(new Date('September 5, 1986')))
+
+writeHeader('JS Arrays & Objects')
 // JS Arrays & Objects
 // NOTE: the movies array used in some exercises is defined at the end of this file
 
@@ -267,26 +270,103 @@ console.log(isTodayMyBirthday(new Date('September 5, 1999')))
    and returns the given object after deleting its property named as the given string.
 */
 
+writeHeader('Delete Props')
+
+const deleteProp = (obj1,string) => {
+ 
+        if(obj1.name === string){
+          delete obj1.name 
+          return obj1
+        } else{
+          return 'names does not match.'
+        }
+
+}
+
+console.log(deleteProp('Sebastian'))
+
 /* EXERCISE 12
     Write a function called oldestMovie which finds the oldest movie in the provided movies array.
 */
+writeHeader('Oldest Movie')
+/*const oldestMovie = function(){
+
+  for (let i = 0; i < movies.length; i++){
+
+       if(movies[i].Year <= '1950'){
+         return movies[i].Title;
+       }
+  }
+
+}
+
+console.log(oldestMovie())*/
 
 /* EXERCISE 13
     Write a function called countMovies which returns the number of movies contained in the provided movies array.
 */
+writeHeader('Number of movies')
+
+const countMovies = function () {
+      
+  let numberOfMovies =  movies.length;
+  return numberOfMovies;
+}
+
+console.log(countMovies())
 
 /* EXERCISE 14
     Write a function called onlyTheTitles which creates an array with just the titles of the movies contained in the provided movies array.
 */
 
+writeHeader('Only the titles')
+const onlyTheTitles = function() {
+  
+  let titles = []
+
+   titles.push(movies.length.Title);
+
+   return titles;
+  
+}
+
+console.log(onlyTheTitles())
+
 /* EXERCISE 15
    Write a function called onlyInThisMillennium which returns only the movies produced in this millennium from the provided movies array.
 */
 
+const onlyInThisMillennium = function(){
+   
+  for(let i=0; i< movies.length; i++){
+      
+    if( movies[i].Title >= '2001'){
+
+      return movies[i];
+    }else{
+      return false;
+    }
+      
+    }
+  
+}
+
+console.log(onlyInThisMillennium())
 /* EXERCISE 16 
     Write a function called getMovieById which receives an id as a parameter and returns the movie with the given id from the provided movies array.
 */
 
+const getMovieById = function(id){
+
+  if(id === movies.imdbID){
+    return movies.Title;
+
+  }else{
+    'invalid ID'
+  }
+}
+
+console.log(getMovieById("tt4154796"))
 /* EXERCISE 17
     Write a function called sumAllTheYears which returns the sum of all the years in which the movies in the provided movies array have been produced.
 */
@@ -448,3 +528,7 @@ const movies = [
       "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
   },
 ];
+
+
+
+
