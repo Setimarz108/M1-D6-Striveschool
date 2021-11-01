@@ -143,13 +143,16 @@ console.log(deleteOne('TTestingg', true))
 */
 
 writeHeader('Only letters')
-const onlyLetters = function(){
+const onlyLetters = function(string){
 
-
+            return string.replace(/\d+/g, '')
 }
+
+console.log(onlyLetters('I was born in 1986 and I´m now 35 years old. The current year is 2021.'))
 /* EXERCISE 6
    Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
 */
+
 
 /* EXERCISE 7
    Write a function called whatDayIsIt that should return the current day of the week.
