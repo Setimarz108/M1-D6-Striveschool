@@ -153,7 +153,7 @@ console.log(onlyLetters('I was born in 1986 and I´m now 35 years old. The curre
 /* EXERCISE 6
    Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
 */
-
+writeHeader('Verify Email')
 const isThisAnEmail = function(string){
 
           let validEmail = /^[^\s@]+@[^\s@]+$/;
@@ -171,6 +171,20 @@ console.log(isThisAnEmail('jangmail.com'))
 /* EXERCISE 7
    Write a function called whatDayIsIt that should return the current day of the week.
 */
+writeHeader('Current Day')
+const whatDayIsIt = function() {
+        
+        const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        let date = new Date();
+        let weekDay = date.getDate()
+
+        return daysOfTheWeek[weekDay]
+
+}
+
+console.log(whatDayIsIt());
+
+
 
 /* EXERCISE 8
     Write a function called rollTheDices which receives a number as a parameter.
