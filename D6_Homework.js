@@ -18,6 +18,7 @@ writeHeader('JS Basics')
    Create a variable called test and assign a string value to it.
 */
 writeHeader('Variable Test')
+
 let test = 'This is a test';
 console.log(test)
 /* EXERCISE B
@@ -25,6 +26,7 @@ console.log(test)
 */
 
 writeHeader('Sum of 10 + 20')
+
 let sum = 10 + 20
 console.log(sum)
 
@@ -32,6 +34,7 @@ console.log(sum)
     Create a variable called random and assign to it a random number between 0 and 20 (it should be randomly created at each execution).
 */
 writeHeader('create a random number')
+
 let random = Math.floor(Math.random() * 20 )
 console.log(random)
 /* EXERCISE D
@@ -39,6 +42,7 @@ console.log(random)
 */
 
 writeHeader('create an object')
+
 let me = {
     name: 'Sebastian',
     surname: 'Marquez',
@@ -50,6 +54,7 @@ console.log(me)
     Write a piece of code for programmatically removing the age property from the previously create object.
 */
 writeHeader('Delete Age from Object')
+
 delete me.age;
 console.log(me)
 
@@ -57,6 +62,7 @@ console.log(me)
    Write a piece of code for programmatically adding to the me object you defined before an array called skills, containing the programming languages you know right now.
 */
 writeHeader('Add an array as a property')
+
  me.skills = ['Javascript', 'CSS', 'HTML'];
 
 
@@ -75,6 +81,7 @@ writeHeader('JS functions')
 /* EXERCISE 1
     Write a function called dice; it should randomize an integer number between 1 and 6.
 */
+writeHeader('dice')
 
 const dice = function () {
 
@@ -196,7 +203,24 @@ console.log(whatDayIsIt());
         values: [3, 3, 4]
     }
 */
+writeHeader('roll the dices')
 
+       const rollTheDices = function (num) {
+               
+                let randomNum = dice()                
+                let sum = randomNum + num;
+               
+                let obj = {
+                  sum: sum,
+                  values: [],
+                }
+
+                obj.values.push(num, randomNum , sum)
+
+                 return  obj;
+       }
+
+       console.log(rollTheDices(10))
 /* EXERCISE 9
    Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
 */
